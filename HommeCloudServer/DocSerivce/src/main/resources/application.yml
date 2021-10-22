@@ -1,0 +1,18 @@
+server:
+  port: 50001
+spring:
+  datasource:
+    url: jdbc:mysql://112.126.83.141:63301/HommeCloudDoc?useSSL=false&&allowPublicKeyRetrieval=true
+    username: root
+    password: Mz5152526@
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: top.Cloud.Homme.docs.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+logging:
+  level:
+    Cloud.Homme: debug

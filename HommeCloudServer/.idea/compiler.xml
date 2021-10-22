@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="LogIn" />
+        <module name="Feign-API" />
+        <module name="UserService" />
+        <module name="DocSerivce" />
+        <module name="GateWay" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="feign-api" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DocSerivce" options="-parameters" />
+      <module name="Feign-API" options="-parameters" />
+      <module name="GateWay" options="-parameters" />
+      <module name="HommeCloud" options="-parameters" />
+      <module name="LogIn" options="-parameters" />
+      <module name="UserService" options="-parameters" />
+      <module name="feign-api" options="-parameters" />
+    </option>
+  </component>
+</project>

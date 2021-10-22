@@ -1,0 +1,37 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: gatewat
+  cloud:
+    nacos:
+      server-addr: 192.168.3.234:8848
+    gateway:
+      routes:
+        - id: user-service #route key
+          uri: lb://userservice # aim hri
+          predicates: # adjust
+            - Path=/user/**
+          filters:
+            - AddRequestHeader=Truth,good
+        - id: doc-service
+          uri: lb://docservice
+          predicates:
+            - Path=/docs/**
+      #default-filters:
+        #- AddRequestHeader =
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://112.126.83.141"
+            allowedMethods:
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedHeaders: "*"
+            allowCredentials: true
+            maxAge: 360000

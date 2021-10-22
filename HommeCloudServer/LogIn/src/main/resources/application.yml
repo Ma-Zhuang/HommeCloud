@@ -1,0 +1,18 @@
+server:
+  port: 50004
+spring:
+  application:
+    name: loginservice
+  cloud:
+    nacos:
+      server-addr: 192.168.3.234:8848
+
+logging:
+  level:
+    Cloud.Homme: debug
+
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50

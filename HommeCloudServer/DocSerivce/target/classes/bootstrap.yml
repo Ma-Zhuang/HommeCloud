@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: docservice
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 192.168.3.234:8848
+      config:
+        file-extension: yaml
